@@ -49,10 +49,9 @@ class MealItem extends StatelessWidget {
   }
 
   void selectMeal(BuildContext ctx) {
-    Navigator.of(ctx)
-        .pushNamed(MealDetailScreen.routeName, arguments: id)
+    Navigator.of(ctx).pushNamed(MealDetailScreen.routeName, arguments: id)
+        // only when popped this function returns a value
         .then((result) {
-      // only when popped does this function return a value
       if (result != null) {
         removeItem(result);
       }
